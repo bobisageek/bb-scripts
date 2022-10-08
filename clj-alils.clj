@@ -19,6 +19,7 @@
 ;; known issues:
 ;; - if an alias name matches a directory name, a slash will be appended
 ;;   (because the shell doesn't know the difference)
+;; - doesn't currently find tools by file name (e.g. -Ttools)
 
 (defn configs []
   (->> (with-out-str (babashka.tasks/clojure "-Sdescribe"))
